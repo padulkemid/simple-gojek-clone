@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   baseBg: {
-    backgroundColor: '#00880D',
+    backgroundColor: '#0081A0',
   },
   baseText: {
     textAlign: 'center',
