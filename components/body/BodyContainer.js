@@ -1,26 +1,26 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
-
-const {width, height} = Dimensions.get('window');
+import {View, ScrollView, StyleSheet} from 'react-native';
 
 const BodyContainer = () => {
   return (
-    <View style={styles.container}>
-      <Text>TODO: add handleBar to this.</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.handleBar} />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    bottom: 0,
     padding: 10,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    height: height / 1.1,
     backgroundColor: 'white',
-    position: 'absolute',
-    width,
+  },
+  handleBar: {
+    width: 25,
+    alignSelf: 'center',
+    borderTopWidth: 3,
+    borderTopColor: 'lightgray',
   },
 });
 
