@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, ScrollView, StyleSheet} from 'react-native';
 
-import {SearchBar, Balance} from './';
+import {SearchBar, Balance, TopPicks} from './';
 
 const BodyContainer = () => {
   return (
@@ -9,6 +9,7 @@ const BodyContainer = () => {
       <View style={styles.handleBar} />
       <SearchBar />
       <Balance />
+      <TopPicks />
     </ScrollView>
   );
 };
