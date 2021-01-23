@@ -1,27 +1,25 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  TouchableHighlight,
-  StyleSheet,
-  Dimensions,
-} from 'react-native';
+import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const pages = [
   {
     id: 1,
     name: 'Promo',
     isSelected: false,
+    icon: 'local-offer',
   },
   {
     id: 2,
     name: 'Home',
     isSelected: true,
+    icon: 'house',
   },
   {
     id: 3,
     name: 'Chat',
     isSelected: false,
+    icon: 'chat',
   },
 ];
 
@@ -46,9 +44,10 @@ const SelectedPage = ({isSelected, children}) => {
 const PageList = () => {
   return (
     <View style={styles.container}>
-      {pages.map(({id, name, isSelected}) => (
+      {pages.map(({id, name, isSelected, icon}) => (
         <SelectedPage isSelected={isSelected} key={id}>
           <View style={styles.buttonBg}>
+            <Icon name={icon} color="white" size={23} style={styles.icon} />
             <Text style={styles.buttonText}>{name}</Text>
           </View>
         </SelectedPage>
@@ -69,8 +68,13 @@ const styles = StyleSheet.create({
     borderRadius: 60,
   },
   buttonBg: {
+    flexDirection: 'row',
+    alignItems: 'center',
     marginVertical: 10,
     marginHorizontal: 20,
+  },
+  icon: {
+    marginRight: 4,
   },
   buttonText: {
     color: 'white',

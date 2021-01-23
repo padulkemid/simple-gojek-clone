@@ -6,6 +6,7 @@ import {
   TouchableHighlight,
   Dimensions,
 } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const {height} = Dimensions.get('window');
 
@@ -14,25 +15,29 @@ const buttons = [
     id: 1,
     name: 'GoRide',
     backgroundColor: '#00A912',
+    icon: 'two-wheeler',
   },
   {
     id: 2,
     name: 'GoCar',
     backgroundColor: '#00A912',
+    icon: 'directions-car',
   },
   {
     id: 3,
     name: 'GoFood',
     backgroundColor: '#EE2636',
+    icon: 'restaurant',
   },
   {
     id: 4,
     name: 'GoMart',
     backgroundColor: '#EE2636',
+    icon: 'shopping-cart',
   },
 ];
 
-const RenderButton = ({name, backgroundColor}) => (
+const RenderButton = ({name, backgroundColor, icon}) => (
   <TouchableHighlight
     underlayColor="white"
     activeOpacity={0.9}
@@ -41,7 +46,7 @@ const RenderButton = ({name, backgroundColor}) => (
       //
     }}>
     <View style={styles.iconContainer}>
-      <Text style={[styles.iconText, styles.centerText]}>{name[2]}</Text>
+      <Icon name={icon} size={30} color="white" style={styles.iconText} />
     </View>
   </TouchableHighlight>
 );
@@ -88,13 +93,12 @@ const styles = StyleSheet.create({
     height: 50,
   },
   iconText: {
-    fontSize: 20,
-    marginVertical: 10,
+    margin: 10,
     color: 'white',
   },
   centerText: {
-    textAlign: 'center',
     fontFamily: 'Montserrat-SemiBold',
+    textAlign: 'center',
   },
 });
 
