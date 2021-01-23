@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#92C541',
     width,
-    height,
+    height: height - 30,
   },
 });
 

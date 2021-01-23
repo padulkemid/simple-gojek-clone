@@ -4,3 +4,4 @@ export {default as Balance} from './Balance';
 export {default as AccountBalance} from './AccountBalance';
 export {default as TopPicks} from './TopPicks';
 export {default as GoFood} from './GoFood';
+export {default as AdBox} from './AdBox';

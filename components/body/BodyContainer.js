@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import ScrollView from 'rn-faded-scrollview';
 
-import {SearchBar, Balance, TopPicks, GoFood} from './';
+import {SearchBar, Balance, TopPicks, GoFood, AdBox} from './';
 
 const fadeColors = [
   'rgba(255, 255, 255, 0.18)',
@@ -24,6 +24,9 @@ const BodyContainer = () => {
       <Balance />
       <TopPicks />
       <GoFood />
+      <AdBox type="partnership" />
+      <AdBox type="gofood" />
+      <View style={styles.blank} />
     </ScrollView>
   );
 };
@@ -42,6 +45,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderTopWidth: 3,
     borderTopColor: '#E8E8E8',
+  },
+  blank: {
+    marginVertical: 100,
   },
 });
 
