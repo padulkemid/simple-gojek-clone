@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, ScrollView, StyleSheet} from 'react-native';
 
-import {SearchBar, Balance, TopPicks} from './';
+import {SearchBar, Balance, TopPicks, GoFood} from './';
 
 const BodyContainer = () => {
   return (
@@ -10,6 +10,7 @@ const BodyContainer = () => {
       <SearchBar />
       <Balance />
       <TopPicks />
+      <GoFood />
     </ScrollView>
   );
 };
