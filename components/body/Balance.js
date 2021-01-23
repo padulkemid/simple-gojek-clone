@@ -30,11 +30,9 @@ const Balance = () => {
     <View style={[styles.baseBg, styles.container]}>
       <AccountBalance />
       {actions.map(({id, name}) => (
-        <View style={styles.actionContainer}>
+        <View key={id} style={styles.actionContainer}>
           <ActionIcons>{name[0]}</ActionIcons>
-          <Text key={id} style={[styles.baseText, styles.actionText]}>
-            {name}
-          </Text>
+          <Text style={[styles.baseText, styles.actionText]}>{name}</Text>
         </View>
       ))}
     </View>
